@@ -36,4 +36,27 @@ o projeto não comprova capacidade de prever cancelamentos futuros.
 
 ## Status
 
-Em desenvolvimento. Modelos ainda não treinados.
+Primeira versão de modelagem concluída: baseline, regressão logística
+e árvore de decisão foram avaliados na validação.
+
+A regressão logística com limiar 0,50 foi escolhida antes da avaliação
+final, considerando pesos iguais para os dois tipos de erro.
+Essa premissa é didática e não representa custos empresariais validados.
+
+### Resultado no teste
+
+- Acurácia: 80,3%.
+- Recall de cancelamento: 55,6%.
+- Precisão dos alertas: 65,2%.
+- Cancelamentos identificados: 208 de 374.
+- Cancelamentos não identificados: 166.
+- Alertas incorretos: 111.
+
+O resultado não comprova capacidade de antecipar cancelamentos futuros
+nem retorno financeiro de ações de retenção.
+
+### Próximas melhorias
+
+- Organizar o notebook e o código reutilizável.
+- Adicionar verificações automatizadas.
+- Documentar e validar a execução em um ambiente novo.
