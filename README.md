@@ -59,4 +59,44 @@ nem retorno financeiro de ações de retenção.
 
 - Organizar o notebook e o código reutilizável.
 - Adicionar verificações automatizadas.
-- Documentar e validar a execução em um ambiente novo.
+- Validar a execução em outros computadores ou sistemas.
+
+## Execução no Windows — PowerShell
+
+Pré-requisitos: Python instalado e acesso à internet.
+A ingestão consulta um CSV público hospedado no GitHub.
+
+Com o projeto disponível no computador, abra um terminal na pasta
+que contém requirements.txt e execute:
+
+### 1. Criar o ambiente virtual
+
+```powershell
+python -m venv .venv
+```
+
+### 2. Instalar as dependências
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+### 3. Abrir o JupyterLab
+
+```powershell
+.\.venv\Scripts\python.exe -m jupyterlab
+```
+
+No navegador, abra 01_exploracao_churn.ipynb e selecione
+Run → Run All Cells para executar as células em ordem.
+
+### Validação da execução
+
+As dependências foram reinstaladas a partir de requirements.txt
+em um ambiente virtual separado, usando Python 3.13.5 no Windows.
+
+O notebook foi executado integralmente com o kernel desse ambiente,
+após reinicialização, sem erros e mantendo as métricas finais reportadas.
+
+Essa verificação foi realizada no mesmo computador do desenvolvimento.
+A execução em outros sistemas e versões de Python ainda não foi validada.

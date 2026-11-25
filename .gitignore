@@ -6,3 +6,6 @@
 
 # Cache do Python
 __pycache__/
+
+# Ambiente temporário de verificação
+.venv-check/
